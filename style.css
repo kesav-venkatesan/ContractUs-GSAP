@@ -1,0 +1,169 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg,#6190e8,#a7bfe8);
+}
+form{
+  min-height: 50vh;
+  min-width: 50vw;
+  background-color: white;
+  color: #777474;
+  border-radius: 2rem;
+  padding: 3rem 5rem;
+  display: flex;
+  gap: 2rem;
+  position: relative;
+}
+
+.title{
+  color: #6391e8;
+  
+}
+.left-content,.right-content{
+  flex: 1;
+}
+
+.right-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.input{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  border: none;
+  outline: none;
+  padding: 1rem 0;
+  padding-top:1.2rem ;
+  font-size: 1.2rem;
+  z-index: 1;
+}
+
+.checkbox-fill{
+  top:100%
+}
+
+.input-container{
+  position: relative;
+}
+
+.placeholder{
+  position: relative;
+  z-index: 2;
+  opacity: 0.6;
+  pointer-events: none;
+  padding: 0.3rem 0rem;
+}
+
+.line-svg{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: visible;
+  z-index: 1;
+  
+  }
+
+.promo-container{
+  display: flex;
+  align-items: center;
+}
+.checkbox-label{
+  font-size: 0.8rem;
+  padding-left: 0.5rem;
+}
+.checkbox{
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.checkbox-container{
+  position: relative;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.checkbox,.checkmark{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  border: 2px solid #c3c3c3;
+}
+.tick-mark{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%)scale(0.6);
+}
+.checkbox-fill{
+  position: absolute;
+  background-color: #6190e8;
+  width: 100%;
+  height: 100%;
+  /* top: 100%; */
+}
+
+button{
+  font-family: "Poppins", sans-serif;
+  background-color: #6190e8;
+  margin-top: 1rem;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 0.5rem 3rem;
+  border-radius: 0.6rem;
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+#character{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scale(0.6) translate(0% ,60%);
+}
+
+.submitted{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 1.3rem;
+  transform: translate(-50%,-50%);
+  text-transform: capitalize;
+  pointer-events: none;
+  opacity: 0;
+}
+
+@media  (max-width: 812px){
+  form {
+    width: 90vw;
+    min-height: 80vh;
+    flex-direction: column;
+    padding: 8rem 3rem;
+  }
+
+
+  .line-svg{
+    width: 100%;
+  }
+
+  #character {
+    transform: scale(0.4) translate(0%, 100%);
+  }
+}
